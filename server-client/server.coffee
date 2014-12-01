@@ -1,3 +1,4 @@
+type = process.argv[2]
 seneca = require('seneca')()
 
 seneca.add
@@ -16,7 +17,8 @@ seneca.add
   callback null,
     answer: sum
 
-seneca.listen()
+seneca.listen
+  type: type || 'http'
 
 ###
 ✈ server.coffee

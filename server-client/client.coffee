@@ -1,6 +1,8 @@
+type = process.argv[2]
 seneca = require('seneca')()
 
-seneca.client()
+seneca.client
+  type: type || 'http'
 
 seneca.act
   role: 'math'
