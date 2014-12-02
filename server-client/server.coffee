@@ -1,4 +1,5 @@
 type = process.argv[2]
+port = process.argv[3]
 seneca = require('seneca')()
 
 seneca.add
@@ -19,6 +20,7 @@ seneca.add
 
 seneca.listen
   type: type || 'http'
+  port: port || 8080
 
 ###
 ✈ server.coffee
