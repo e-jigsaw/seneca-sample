@@ -1,8 +1,10 @@
 type = process.argv[2]
+port = process.argv[3]
 seneca = require('seneca')()
 
 seneca.client
   type: type || 'http'
+  port: port || '8080'
 
 seneca.act
   role: 'math'
